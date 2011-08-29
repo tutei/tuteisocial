@@ -1,0 +1,39 @@
+.relationshiptype_full .wall .friend{
+
+    float:left;
+    width:80px;
+    text-align:center;
+    margin:3px 3px;
+    
+}
+
+.relationshiptype_full .wall{
+
+    width:270px;
+
+}
+
+.relationshiptype_full .pagenavigator{
+
+    padding:0 20px;
+}
+
+div.content-view-full div.attribute-signature {
+    padding:10px;
+}
+
+.relationshiptype_full .add-as-friend, .relationshiptype_full .friend,
+    .relationshiptype_full .pending, .relationshiptype_full .invite {
+
+    padding:0 0 10px 0;
+}
+
+.relationshiptype_full .remove-option{
+
+    width:60px;
+    float:left;
+    margin:0;
+    padding:5px 0;
+    text-align:center;
+    
+}

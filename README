@@ -1,0 +1,87 @@
+DappSocial README
+
+What is Dapp Social?
+--------------------
+Dapp Social is a social networking extension for eZ publish build on top of
+eZ flow extension. 
+
+The project aims to mimic buddypress and drupalcommons features, so, if you
+want to know what is all about, just visit:
+
+http://buddypress.org/
+http://acquia.com/products-services/drupal-commons
+
+It's free and open source, everybody can join the project, let's build an eZ
+Social extension!
+
+Dapp Social features
+--------------------
+- Allow users to create connections with friends.
+- Creates a blog, calendar, gallery, and folder for every user, needs some 
+configuration, like make user class a container and change member roles and 
+polices.
+- To be defined.
+
+How to contribute
+-----------------
+You can create a fork, make some changes and do pull requests.
+
+You can do it all online, just learn how to use github and enjoy social coding.
+
+I'm creating a Project Achievements file inside docs folder,there will be all projects tasks.
+
+
+Installation
+------------
+Read docs/INSTALL
+
+
+Where to get more help
+----------------------
+Please contact me.
+
+
+Live demo of Dapp Social
+-------------------------
+Now I have made just a video: http://youtu.be/ThW0RClzXVc
+To be created.
+
+
+Extension subdirectory 	Description
+-----------------------------------
+actions/ 	New actions for forms
+autoloads/ 	Definitions of new template operators
+datatypes/ 	Definitions for new datatypes
+design/ 	Files (*.tpl, *.css, *.jpg, *.js ...) related to the design
+eventtypes/ 	Custom workflow events
+modules/ 	One or more modules with views, template fetch functions, and so on
+settings/ 	Configuration files (*.ini, *.ini.append.php)
+translations/ 	Translation files (*.ts)
+
+
+LICENSE
+-------
+//
+// ## BEGIN COPYRIGHT, LICENSE AND WARRANTY NOTICE ##
+// SOFTWARE NAME: Dapp Social
+// SOFTWARE RELEASE: 0.0.1
+// COPYRIGHT NOTICE: Copyright (C) 2011 Thiago Campos Viana
+// SOFTWARE LICENSE: GNU General Public License v2.0
+// NOTICE: >
+//   This program is free software; you can redistribute it and/or
+//   modify it under the terms of version 2.0  of the GNU General
+//   Public License as published by the Free Software Foundation.
+//
+//   This program is distributed in the hope that it will be useful,
+//   but WITHOUT ANY WARRANTY; without even the implied warranty of
+//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//   GNU General Public License for more details.
+//
+//   You should have received a copy of version 2.0 of the GNU General
+//   Public License along with this program; if not, write to the Free
+//   Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+//   MA 02110-1301, USA.
+//
+//
+// ## END COPYRIGHT, LICENSE AND WARRANTY NOTICE ##
+//

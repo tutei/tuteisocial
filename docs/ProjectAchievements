@@ -1,0 +1,28 @@
+Version 1.0
+* Redirect user after login to the user profile. ( OK )
+* Add friends name with links above friends images. ( OK )
+* Fix user registration page. ( OK )
+* Send email when user requests friendship. ( OK )
+* Add private message support.
+* Add activity streams. ( Started )
+* Add shiva3d support. ( OK )
+* Add panda3d support. ( OK )
+* Add flash support. ( OK )
+* Add user profile feature.
+
+
+* Add group support.
+* Add chat.
+* Add twitter fetch.
+
+
+* Add twitter push.
+* Add better Q&A feature.
+
+
+* Add game score API. ( OK, needs test app )
+* Add game multiplayer/master server API. ( OK, needs test app )
+* Add game achievements API.
+
+
+* Code and Design Optimizations

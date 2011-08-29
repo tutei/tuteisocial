@@ -1,0 +1,62 @@
+.vote-area div, .vote-area span, .vote-area p {
+    background:none repeat scroll 0 0 transparent;
+    border:0 none;
+    font-size:100%;
+    margin:0;
+    padding:0;
+    vertical-align:baseline;
+}
+
+.vote-area{
+    width:120px;
+	float:right;
+}
+
+
+.vote {
+    text-align:center;
+}
+
+.vote span {
+    color:#808185;
+    display:block;
+    font-weight:bold;
+}
+
+
+span.vote-up-off, span.vote-up-on, span.vote-down-off, span.vote-down-on {
+    background-image:url("../images/sprites.png");
+    background-repeat:no-repeat;
+    overflow:hidden;
+}
+
+
+
+span.vote-up-off, span.vote-down-off {
+cursor:pointer;
+}
+
+span.vote-up-off, span.vote-up-on, span.vote-down-off, span.vote-down-on {
+background-position:0 -115px;
+display:block;
+height:25px;
+margin:0 auto;
+width:41px;
+}
+
+span.vote-up-off, span.vote-up-on, span.vote-down-off, span.vote-down-on{
+font-size:1px;
+text-indent:-9999em;
+}
+
+span.vote-down-off {
+background-position:0 -148px;
+}
+
+span.vote-down-on {
+background-position:0 -180px;
+}
+
+span.vote-up-on {
+background-position:0 -80px;
+}

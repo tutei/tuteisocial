@@ -33,11 +33,11 @@ Clear INI and template caches. (from admin 'Setup' tab or commandline)
 
 In administrator user interface, click 'setup' tab->'Classes'. Select 'Users' in the class group list. Click the edit button. 
 
-In the user class. Add the 'Relationship' attribute, choose a name for it. 
+In the user class. Add the 'Relationship' attribute, choose a name for it, also add 'User exp' attribute.
 
 Also check "Container" option of the User class, so it will be possible to create objects inside the user account node. 
 
-7. Add tuteisocial packages: 'Setup'->'Packages'->'Import new package'. Upload all tuteisocial packages ( extension/tuteisocial/packages/* ). 
+7. Add tuteisocial_classes-1.3-1.ezpkg package: 'Setup'->'Packages'->'Import new package'. Upload all tuteisocial packages ( extension/tuteisocial/packages/* ). 
 
 8. Change your override settings, copy the contents of the following file: extension/tuteisocial/settings/override.ini.append.php-RECOMMENDED.
 Paste to the beggining of the file: settings/siteaccess/[front-end-siteaccess]/override.ini.append.php
@@ -73,4 +73,6 @@ Content 	Read 	Subtree( Members ) *
 If you are using virtual hosts please change your .htaccess and include this line to allow model viewer file access:
 
 RewriteRule ^extension/tuteisocial/design/ezflow/unity/objViewer.unity3d - [L]
+
+If you are using ezwebin, change your main design settings to ezflow.
 

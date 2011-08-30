@@ -31,7 +31,7 @@ foreach ($nodes as $usernode) {
         $userObj = eZContentObject::fetch($usernode['id']);
         $cli->output($userObj->attribute('name'));
 
-        $ini = eZINI::instance('dappsocial.ini');
+        $ini = eZINI::instance('tuteisocial.ini');
 
         foreach ($ini->variableArray("UserExtras", "UserNodes") as $info) {
             if (!hasSubNode($userObj->mainNodeID(), $info[2])) {

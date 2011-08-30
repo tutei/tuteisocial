@@ -3,7 +3,7 @@
 {def $currentUser=fetch( 'user', 'current_user' )}
 
 
-{def $page_limit = ezini( 'ProfileSettings', 'UserListLength', 'dappsocial.ini' )
+{def $page_limit = ezini( 'ProfileSettings', 'UserListLength', 'tuteisocial.ini' )
 $classes = ezini( 'MenuContentSettings', 'ExtraIdentifierList', 'menu.ini' )
 $children_count = $attribute.content}
 
@@ -21,8 +21,8 @@ $children_count = $attribute.content}
             <form action={"content/action"|ezurl} method="post">
                 <a href={$object.main_node.url_alias|ezurl}>{$object.name|wash}</a> - {get_elaboration($requester,$currentUser.contentobject_id)}
                 <div class="options">
-                <input name="SocialApprove" type="submit" value="{"Approve"|i18n('extension/dappsocial/actions')}" />
-                <input name="SocialDelete" type="submit" value="{"Remove"|i18n('extension/dappsocial/actions')}" />
+                <input name="SocialApprove" type="submit" value="{"Approve"|i18n('extension/tuteisocial/actions')}" />
+                <input name="SocialDelete" type="submit" value="{"Remove"|i18n('extension/tuteisocial/actions')}" />
                 <input name="ContentObjectID" type="hidden" value="{$requester}" />
                 </div>
             </form>
@@ -41,8 +41,8 @@ $children_count = $attribute.content}
             <form action={"content/action"|ezurl} method="post">
                 {get_elaboration($attribute.contentobject_id,$currentUser.contentobject_id)}
                 <div class="options">
-                <input name="SocialApprove" type="submit" value="{"Approve"|i18n('extension/dappsocial/actions')}" />
-                <input name="SocialDelete" type="submit" value="{"Remove"|i18n('extension/dappsocial/actions')}" />
+                <input name="SocialApprove" type="submit" value="{"Approve"|i18n('extension/tuteisocial/actions')}" />
+                <input name="SocialDelete" type="submit" value="{"Remove"|i18n('extension/tuteisocial/actions')}" />
                 <input name="ContentObjectID" type="hidden" value="{$attribute.contentobject_id}" />
                 </div>
             </form>
@@ -50,7 +50,7 @@ $children_count = $attribute.content}
         </div>
     {elseif $currentUser.is_logged_in}
             {ezcss_require( 'colorbox.css' )}
-            {ezscript_require( array('ezjsc::jquery','jquery.colorbox-min.js', 'dappsocial.js') )}
+            {ezscript_require( array('ezjsc::jquery','jquery.colorbox-min.js', 'tuteisocial.js') )}
             <script type="text/javascript">
             <!--
             $(document).ready(
@@ -65,10 +65,10 @@ $children_count = $attribute.content}
                             });
 
                             $(function(){ldelim}
-                                limitChars('Elaboration', {ezini( 'RequestSettings', 'ElaborationMaxLength', 'dappsocial.ini' )}, 'charlimitinfo');
+                                limitChars('Elaboration', {ezini( 'RequestSettings', 'ElaborationMaxLength', 'tuteisocial.ini' )}, 'charlimitinfo');
                                 $('#Elaboration').keyup(function(){ldelim}
 
-                                 limitChars('Elaboration', {ezini( 'RequestSettings', 'ElaborationMaxLength', 'dappsocial.ini' )}, 'charlimitinfo');
+                                 limitChars('Elaboration', {ezini( 'RequestSettings', 'ElaborationMaxLength', 'tuteisocial.ini' )}, 'charlimitinfo');
 
                                  {rdelim})
 
@@ -77,7 +77,7 @@ $children_count = $attribute.content}
             -->
             </script>
             <div class="add-as-friend">
-                <a class='example8' href="#">{"Add as Friend"|i18n('extension/dappsocial/actions')}</a>
+                <a class='example8' href="#">{"Add as Friend"|i18n('extension/tuteisocial/actions')}</a>
             </div>
             <!-- This contains the hidden content for inline calls -->
             <div style='display:none'>
@@ -85,13 +85,13 @@ $children_count = $attribute.content}
 
                     <form action={"content/action"|ezurl} method="post">
 
-                        <p>{"Personal message(optional)"|i18n('extension/dappsocial/actions')}</p>
+                        <p>{"Personal message(optional)"|i18n('extension/tuteisocial/actions')}</p>
                         <div>
                              <div id="charlimitinfo"></div>
-                            <textarea name="Elaboration" id="Elaboration" rows="2" cols="20">{"Hello, %friendname! Do you want to be my friend? %username"|i18n('extension/dappsocial/actions','',hash('%friendname',$attribute.object.name,'%username',$currentUser.contentobject.name))}</textarea>
+                            <textarea name="Elaboration" id="Elaboration" rows="2" cols="20">{"Hello, %friendname! Do you want to be my friend? %username"|i18n('extension/tuteisocial/actions','',hash('%friendname',$attribute.object.name,'%username',$currentUser.contentobject.name))}</textarea>
                         </div>
                         <div>
-                            <input name="SocialRequest" type="submit" value="{"Send"|i18n('extension/dappsocial/actions')}" />
+                            <input name="SocialRequest" type="submit" value="{"Send"|i18n('extension/tuteisocial/actions')}" />
                                    <input name="ContentObjectID" type="hidden" value="{$attribute.contentobject_id}" />
                         </div>
                     </form>
@@ -105,7 +105,7 @@ $children_count = $attribute.content}
 
 
 
-    <h3>{"Friends (%total)"|i18n('extension/dappsocial/profile','',hash('%total', $attribute.content))}</h3>
+    <h3>{"Friends (%total)"|i18n('extension/tuteisocial/profile','',hash('%total', $attribute.content))}</h3>
 
     {def $friends=fetch('social', 'list', hash('user_id',$attribute.contentobject_id, 'offset', $#view_parameters.offset, 'limit',$page_limit ))}
     <div class="wall">
@@ -125,7 +125,7 @@ $children_count = $attribute.content}
             </p>
             {if eq($currentUser.contentobject_id,$attribute.contentobject_id)}
             <form action={"content/action"|ezurl} method="post">
-                <input name="SocialDelete" type="image" src={"editdelete.png"|ezimage} value="{"Remove"|i18n('extension/dappsocial/actions')}" />
+                <input name="SocialDelete" type="image" src={"editdelete.png"|ezimage} value="{"Remove"|i18n('extension/tuteisocial/actions')}" />
                 <input name="ContentObjectID" type="hidden" value="{$object.id}" />
             </form>
             {/if}

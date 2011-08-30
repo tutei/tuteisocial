@@ -1,7 +1,7 @@
 <?php
 //
 // ## BEGIN COPYRIGHT, LICENSE AND WARRANTY NOTICE ##
-// SOFTWARE NAME: Dapp Social
+// SOFTWARE NAME: Tutei Social
 // SOFTWARE RELEASE: 0.0.1
 // COPYRIGHT NOTICE: Copyright (C) 2011 Thiago Campos Viana
 // SOFTWARE LICENSE: GNU General Public License v2.0
@@ -24,11 +24,11 @@
 // ## END COPYRIGHT, LICENSE AND WARRANTY NOTICE ##
 //
 
-class dappsocialInfo
+class tuteisocialInfo
 {
     static function info()
     {
-        return array( 'Name' => 'Dapp Social',
+        return array( 'Name' => 'Tutei Social',
                       'Version' => '0.0.1',
                       'Copyright' => 'Copyright (C) 2011 Thiago Campos Viana',
                       'License' => 'GNU General Public License v2.0'

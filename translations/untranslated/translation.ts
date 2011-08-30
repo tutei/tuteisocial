@@ -2,14 +2,14 @@
 <!DOCTYPE TS>
 <TS version="2.0">
 <context>
-    <name>extension/dappsocial/profile</name>
+    <name>extension/tuteisocial/profile</name>
     <message>
         <source>Friends (%total)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>extension/dappsocial/actions</name>
+    <name>extension/tuteisocial/actions</name>
     <message>
         <source>Add as Friend</source>
         <translation type="unfinished"></translation>
@@ -44,7 +44,7 @@
     </message>
 </context>
 <context>
-    <name>extension/dappsocial/datatype</name>
+    <name>extension/tuteisocial/datatype</name>
     <message>
         <source>Relationship</source>
         <comment>Datatype name</comment>

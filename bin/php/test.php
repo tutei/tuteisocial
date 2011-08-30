@@ -1,7 +1,7 @@
 <?php
 
 // just a quick test
-// user php extension/dappsocial/bin/php/test.php
+// user php extension/tuteisocial/bin/php/test.php
 
 set_time_limit(0);
 require 'autoload.php';

@@ -67,7 +67,7 @@
 		
 		if (typeof unityObject != "undefined") {ldelim}
 		
-			unityObject.embedUnity("unityPlayer", "{concat('http://', ezini('SiteSettings', 'SiteURL', 'site.ini')|explode('/index.php')[0],'/extension/dappsocial/design/ezflow/unity/objViewer.unity3d')}", {$width}, {$height});
+			unityObject.embedUnity("unityPlayer", "{concat('http://', ezini('SiteSettings', 'SiteURL', 'site.ini')|explode('/index.php')[0],'/extension/tuteisocial/design/ezflow/unity/objViewer.unity3d')}", {$width}, {$height});
 			
 		{rdelim}
 		

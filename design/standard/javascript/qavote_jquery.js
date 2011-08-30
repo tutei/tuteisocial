@@ -33,7 +33,7 @@
                     $(this).addClass('vote-down-on');            
                 }
                 $('li a', '#qavote_rating_' + args[1]).unbind( 'click' );
-                jQuery.ez( 'dappsocial::rate::' + args[1] + '::' + args[2] + '::' + args[3], {}, _callBack );
+                jQuery.ez( 'tuteisocial::rate::' + args[1] + '::' + args[2] + '::' + args[3], {}, _callBack );
             } else {
                 $('#qavote_has_rated_' + args[1]).removeClass('hide');
             }

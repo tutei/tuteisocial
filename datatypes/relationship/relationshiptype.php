@@ -2,7 +2,7 @@
 
 //
 // ## BEGIN COPYRIGHT, LICENSE AND WARRANTY NOTICE ##
-// SOFTWARE NAME: Dapp Social
+// SOFTWARE NAME: Tutei Social
 // SOFTWARE RELEASE: 0.0.1
 // COPYRIGHT NOTICE: Copyright (C) 2011 Thiago Campos Viana
 // SOFTWARE LICENSE: GNU General Public License v2.0
@@ -33,7 +33,7 @@ class RelationshipType extends eZDataType {
     //  Construtor
 
     function RelationshipType() {
-        $this->eZDataType(self::DATA_TYPE_STRING, ezpI18n::tr('extension/dappsocial/datatype', 'Relationship', 'Datatype name'), array('serialize_supported' => true));
+        $this->eZDataType(self::DATA_TYPE_STRING, ezpI18n::tr('extension/tuteisocial/datatype', 'Relationship', 'Datatype name'), array('serialize_supported' => true));
     }
 
     function initializeObjectAttribute($contentObjectAttribute, $currentVersion, $originalContentObjectAttribute) {
@@ -177,7 +177,7 @@ class RelationshipType extends eZDataType {
 
 
         if ($elaboration != '') {
-            $ini = eZINI::instance('dappsocial.ini');
+            $ini = eZINI::instance('tuteisocial.ini');
 
             // Set correct site timezone
             $length = $ini->variable("RequestSettings", "ElaborationMaxLength");
@@ -193,7 +193,7 @@ class RelationshipType extends eZDataType {
             $tpl->setVariable('receiver', $receiverUser);
             $tpl->setVariable('sender', $senderUser);
             $tpl->setVariable('user_message', $elaboration);
-            $result = $tpl->fetch("design:dappsocial/friendshipmail.tpl");
+            $result = $tpl->fetch("design:tuteisocial/friendshipmail.tpl");
 
 
             $mail = new eZMail();

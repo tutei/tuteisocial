@@ -1,8 +1,8 @@
-DappSocial README
+TuteiSocial README
 
-What is Dapp Social?
+What is Tutei Social?
 --------------------
-Dapp Social is a social networking extension for eZ publish build on top of
+Tutei Social is a social networking extension for eZ publish build on top of
 eZ flow extension. 
 
 The project aims to mimic buddypress and drupalcommons features, so, if you
@@ -14,7 +14,7 @@ http://acquia.com/products-services/drupal-commons
 It's free and open source, everybody can join the project, let's build an eZ
 Social extension!
 
-Dapp Social features
+Tutei Social features
 --------------------
 - Allow users to create connections with friends.
 - Creates a blog, calendar, gallery, and folder for every user, needs some 
@@ -41,7 +41,7 @@ Where to get more help
 Please contact me.
 
 
-Live demo of Dapp Social
+Live demo of Tutei Social
 -------------------------
 Now I have made just a video: http://youtu.be/ThW0RClzXVc
 To be created.
@@ -63,7 +63,7 @@ LICENSE
 -------
 //
 // ## BEGIN COPYRIGHT, LICENSE AND WARRANTY NOTICE ##
-// SOFTWARE NAME: Dapp Social
+// SOFTWARE NAME: Tutei Social
 // SOFTWARE RELEASE: 0.0.1
 // COPYRIGHT NOTICE: Copyright (C) 2011 Thiago Campos Viana
 // SOFTWARE LICENSE: GNU General Public License v2.0

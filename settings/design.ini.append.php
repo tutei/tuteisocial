@@ -1,15 +1,15 @@
 <?php /*
 
 [ExtensionSettings]
-DesignExtensions[]=dappsocial
+DesignExtensions[]=tuteisocial
 
 [JavaScriptSettings]
 # List of JavaScript files to include in pagelayout
 
 [StylesheetSettings]
-FrontendCSSFileList[]=dappsocial.css
+FrontendCSSFileList[]=tuteisocial.css
 
-BackendCSSFileList[]=dappsocial.css
+BackendCSSFileList[]=tuteisocial.css
 
 
 #[JavaScriptSettings]

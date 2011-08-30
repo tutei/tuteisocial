@@ -4,8 +4,8 @@ $FunctionList = array();
 
 $FunctionList['list'] = array('name' => 'list',
     'operation_types' => array('read'),
-    'call_method' => array('include_file' => 'extension/dappsocial/modules/social/dappsocialfunctioncollection.php',
-        'class' => 'DappSocialFunctionCollection',
+    'call_method' => array('include_file' => 'extension/tuteisocial/modules/social/tuteisocialfunctioncollection.php',
+        'class' => 'TuteiSocialFunctionCollection',
         'method' => 'fetchList'),
     'parameter_type' => 'standard',
     'parameters' => array(
@@ -27,8 +27,8 @@ $FunctionList['list'] = array('name' => 'list',
 
 $FunctionList['requests'] = array('name' => 'requests',
     'operation_types' => array('read'),
-    'call_method' => array('include_file' => 'extension/dappsocial/modules/social/dappsocialfunctioncollection.php',
-        'class' => 'DappSocialFunctionCollection',
+    'call_method' => array('include_file' => 'extension/tuteisocial/modules/social/tuteisocialfunctioncollection.php',
+        'class' => 'TuteiSocialFunctionCollection',
         'method' => 'fetchRequests'),
     'parameter_type' => 'standard',
     'parameters' => array(

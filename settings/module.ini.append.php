@@ -1,7 +1,7 @@
 <?php /*
 
 [ModuleSettings]
-ExtensionRepositories[]=dappsocial
+ExtensionRepositories[]=tuteisocial
 
 
 ModuleList[]=social

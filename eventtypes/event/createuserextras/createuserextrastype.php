@@ -24,7 +24,7 @@ class CreateUserExtrasType extends eZWorkflowEventType {
 
         if ($versionID == 1 && $userObj->attribute('class_identifier')=='user') {
 
-            $ini = eZINI::instance('dappsocial.ini');
+            $ini = eZINI::instance('tuteisocial.ini');
 
             foreach ($ini->variableArray("UserExtras", "UserNodes") as $info) {
                 $node = new ezpObject($info[0], $userObj->mainNodeID(), $parameters['user_id'], 2);

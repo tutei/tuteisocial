@@ -2,7 +2,7 @@
 
 //
 // ## BEGIN COPYRIGHT, LICENSE AND WARRANTY NOTICE ##
-// SOFTWARE NAME: Dapp Social
+// SOFTWARE NAME: Tutei Social
 // SOFTWARE RELEASE: 0.0.1
 // COPYRIGHT NOTICE: Copyright (C) 2011 Thiago Campos Viana
 // SOFTWARE LICENSE: GNU General Public License v2.0
@@ -25,7 +25,7 @@
 // ## END COPYRIGHT, LICENSE AND WARRANTY NOTICE ##
 //
 
-class DappSocialFunctionCollection {
+class TuteiSocialFunctionCollection {
 
     public static function fetchList($user_id, $offset, $limit) {
 

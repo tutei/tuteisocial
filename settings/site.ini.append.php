@@ -1,7 +1,7 @@
 <?php /*
 
 [TemplateSettings]
-ExtensionAutoloadPath[]=dappsocial
+ExtensionAutoloadPath[]=tuteisocial
 #ShowXHTMLCode=disabled
 #ShowUsedTemplates=enabled
 #TemplateCompile=disabled
@@ -9,10 +9,10 @@ ExtensionAutoloadPath[]=dappsocial
 #DevelopmentMode=enabled
 
 [ExtensionSettings]
-ActiveExtensions[]=dappsocial
+ActiveExtensions[]=tuteisocial
 
 [RegionalSettings]
-TranslationExtensions[]=dappsocial
+TranslationExtensions[]=tuteisocial
 
 [OverrideSettings]
 #Cache=disabled

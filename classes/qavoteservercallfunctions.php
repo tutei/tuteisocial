@@ -91,7 +91,7 @@ class qaVoteServerCallFunctions extends ezjscServerFunctions {
 
 
             $mainObject = $contentobjectAttribute->object();
-            $ini = eZINI::instance('dappsocial.ini');
+            $ini = eZINI::instance('tuteisocial.ini');
             // Set correct site timezone
             $length = $ini->variable("VoteSettings", $mainObject->attribute('class_identifier'));
 

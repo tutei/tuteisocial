@@ -1,28 +1,28 @@
 <?php /* #?ini charset="utf-8"?
 
 [ezjscServer]
-FunctionList[]=dappsocial_rate
-FunctionList[]=dappsocial_user_has_rated
+FunctionList[]=tuteisocial_rate
+FunctionList[]=tuteisocial_user_has_rated
 FunctionList[]=stats
 FunctionList[]=masterserver
 
-[ezjscServer_dappsocial]
+[ezjscServer_tuteisocial]
 # Url to test this server function(rate):
-# <root>/ezjscore/call/dappsocial::rate::<contentobjectattribute_id>::<version>::<rating>
+# <root>/ezjscore/call/tuteisocial::rate::<contentobjectattribute_id>::<version>::<rating>
 Class=qaVoteServerCallFunctions
-Functions[]=dappsocial
+Functions[]=tuteisocial
 PermissionPrFunction=enabled
-File=extension/dappsocial/classes/qavoteservercallfunctions.php
+File=extension/tuteisocial/classes/qavoteservercallfunctions.php
 
 
 [ezjscServer_stats]
 Class=StatsServerCallFunctions
 Functions[]=stats
-File=extension/dappsocial/classes/statsservercallfunctions.php
+File=extension/tuteisocial/classes/statsservercallfunctions.php
 
 [ezjscServer_masterserver]
 Class=MasterServerCallFunctions
 Functions[]=masterserver
-File=extension/dappsocial/classes/masterservercallfunctions.php
+File=extension/tuteisocial/classes/masterservercallfunctions.php
 
 */ ?>

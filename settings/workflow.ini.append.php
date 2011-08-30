@@ -4,7 +4,7 @@
 AvailableOperationList[]=user_activation
 
 [EventSettings]
-ExtensionDirectories[]=dappsocial
+ExtensionDirectories[]=tuteisocial
 AvailableEventTypes[]=event_createuserextras
 
 */

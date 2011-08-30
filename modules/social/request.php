@@ -11,8 +11,8 @@ $tpl->setVariable( 'view_parameters', $viewParameters );
 
 $Result = array();
 $Result['path'] = array(array('url' => false,
-        'text' => 'Dapp Social'),
+        'text' => 'Tutei Social'),
     array('url' => false,
         'text' => 'Request'));
-$Result['content'] = $tpl->fetch("design:dappsocial/request.tpl");
+$Result['content'] = $tpl->fetch("design:tuteisocial/request.tpl");
 ?>

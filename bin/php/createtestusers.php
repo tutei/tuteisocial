@@ -7,7 +7,7 @@ function createTestUser($first_name, $last_name, $username, $pass ) {
     $user->__set("first_name", $first_name);
     $user->__set("last_name", $last_name);
     $user->__set("user_account", "$username|$username@thepowerpuffgirls.com|" . md5("$username\n$pass") . "|2");
-    $user->__set("image", "extension/dappsocial/test_images/$username.jpg");
+    $user->__set("image", "extension/tuteisocial/test_images/$username.jpg");
     $user->publish();
 }
 

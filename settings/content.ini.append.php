@@ -1,7 +1,7 @@
 <?php /* #?ini charset="utf-8"?
 
 [DataTypeSettings]
-ExtensionDirectories[]=dappsocial
+ExtensionDirectories[]=tuteisocial
 AvailableDataTypes[]=relationship
 AvailableDataTypes[]=userexp
 AvailableDataTypes[]=qavote
@@ -11,7 +11,7 @@ DefaultVersionHistoryLimit=3
 
 
 [ActionSettings]
-ExtensionDirectories[]=dappsocial
+ExtensionDirectories[]=tuteisocial
 
 
 

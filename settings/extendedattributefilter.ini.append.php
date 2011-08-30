@@ -2,7 +2,7 @@
 
 
 [qaVoteFilter]
-ExtensionName=dappsocial
+ExtensionName=tuteisocial
 ClassName=qaVoteFilter
 MethodName=createSqlParts
 FileName=classes/qavotefilter.php

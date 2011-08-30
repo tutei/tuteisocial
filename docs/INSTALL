@@ -1,23 +1,23 @@
 Installation
 ================
 
-1. Copy dappsocial into 'extension' folder
+1. Copy tuteisocial into 'extension' folder
 
 2.  Run the mysql scipts:
 
-* extension/dappsocial/sql/mysql/schema.sql
+* extension/tuteisocial/sql/mysql/schema.sql
 
-* extension/dappsocial/sql/common/democontent.sql
+* extension/tuteisocial/sql/common/democontent.sql
 
-3.  Activate dappsocial 
+3.  Activate tuteisocial 
 
-In administrator user interface, click 'setup' tab->'extensions' menu, select 'dappsocial', click button 'Apply Changes'.
+In administrator user interface, click 'setup' tab->'extensions' menu, select 'tuteisocial', click button 'Apply Changes'.
 
 or in settings/override/site.ini.append.php, add acivation configuration under "ExtensionSettings" section:
 
 [ExtensionSettings]
 
-ActiveExtensions[]=dappsocial 
+ActiveExtensions[]=tuteisocial 
 
 4. Regenerate autoloads
 
@@ -37,9 +37,9 @@ In the user class. Add the 'Relationship' attribute, choose a name for it.
 
 Also check "Container" option of the User class, so it will be possible to create objects inside the user account node. 
 
-7. Add dappsocial packages: 'Setup'->'Packages'->'Import new package'. Upload all dappsocial packages ( extension/dappsocial/packages/* ). 
+7. Add tuteisocial packages: 'Setup'->'Packages'->'Import new package'. Upload all tuteisocial packages ( extension/tuteisocial/packages/* ). 
 
-8. Change your override settings, copy the contents of the following file: extension/dappsocial/settings/override.ini.append.php-RECOMMENDED.
+8. Change your override settings, copy the contents of the following file: extension/tuteisocial/settings/override.ini.append.php-RECOMMENDED.
 Paste to the beggining of the file: settings/siteaccess/[front-end-siteaccess]/override.ini.append.php
 
 9. Create the CreateUserExtras workflow: 'Workflows'->'Standard'->'New workflow'->'Create UserExtras' ( name Create UserExtras ).
@@ -66,11 +66,11 @@ Content 	Read 	Subtree( Members ) *
 
  *Could be given to anonymous user. 
 
-12. If your site already has registered members, open the command line, go to eZ Publish installation folder, run "php extension/dappsocial/bin/php/userextras.php", so it will create all user extras objects. 
+12. If your site already has registered members, open the command line, go to eZ Publish installation folder, run "php extension/tuteisocial/bin/php/userextras.php", so it will create all user extras objects. 
 
 13. Create a link content object in the site root node and link it to users/members node.
 
 If you are using virtual hosts please change your .htaccess and include this line to allow model viewer file access:
 
-RewriteRule ^extension/dappsocial/design/ezflow/unity/objViewer.unity3d - [L]
+RewriteRule ^extension/tuteisocial/design/ezflow/unity/objViewer.unity3d - [L]
 

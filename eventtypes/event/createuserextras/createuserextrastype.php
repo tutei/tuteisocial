@@ -12,22 +12,19 @@ class CreateUserExtrasType extends eZWorkflowEventType {
     function execute($process, $event) {
         /* aqui vai o código do workflow */
 		
-		$parameters = $process->attribute( 'parameter_list' );
+        $parameters = $process->attribute( 'parameter_list' );
 		
 		
-		$versionID =& $parameters['version'];
+	$versionID =& $parameters['version'];
         $userObj = eZContentObject::fetch( $parameters['object_id'] );
 		
-		//$nodeType = $event->attribute('data_text1');
-		//$doNew = $event->attribute('data_int1');
-		//$doUpdates = $event->attribute('data_int2');
 
         if ($versionID == 1 && $userObj->attribute('class_identifier')=='user') {
 
             $ini = eZINI::instance('tuteisocial.ini');
 
             foreach ($ini->variableArray("UserExtras", "UserNodes") as $info) {
-                $node = new ezpObject($info[0], $userObj->mainNodeID(), $parameters['user_id'], 2);
+                $node = new ezpObject($info[0], $userObj->mainNodeID(), $userObj->attribute('id'), 2);
                 $node->__set($info[1], $info[2]);
                 $node->publish();
             }

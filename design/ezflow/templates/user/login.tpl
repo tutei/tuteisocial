@@ -97,6 +97,9 @@ function AdminSiteaccessCheckbox( val )
 
 {include uri="design:janrain/embeddedscript.tpl"}
 
+
+{include uri='design:janrain/modalscript.tpl'}
+
 </div>
 
 </div></div></div>

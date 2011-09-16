@@ -19,9 +19,15 @@ $ViewList['delete'] = array(
         'script'  => 'delete.php'
 );
 
+$ViewList['glogin'] = array(
+        'functions' => array( 'glogin' ),
+        'script'  => 'glogin.php'
+);
+
 $FunctionList[ 'request' ] = array();
 $FunctionList[ 'approve' ] = array();
 $FunctionList[ 'delete' ] = array();
+$FunctionList[ 'glogin' ] = array();
 
 
 ?>

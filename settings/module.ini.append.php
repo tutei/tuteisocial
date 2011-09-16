@@ -11,5 +11,6 @@ ModuleList[]=social
 PolicyOmitList[]=social/approve
 PolicyOmitList[]=social/request
 PolicyOmitList[]=social/delete
+PolicyOmitList[]=social/glogin
 
 */ ?>

@@ -120,6 +120,8 @@ if (!$role instanceof eZRole) {
     $role->appendPolicy("ezjscore","call");
     $role->appendPolicy("ezoe","editor");
     
+    $role->assignToUser(11);
+    
     $role = eZRole::fetchByName('Anonymous');
     $role->appendPolicy("social","glogin");
     

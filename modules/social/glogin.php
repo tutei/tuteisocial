@@ -1,67 +1,56 @@
 <?php
-
+//session_destroy();exit;
 session_start();
 
-
-$client = new apiClient();
-// Visit https://code.google.com/apis/console to generate your
-// oauth2_client_id, oauth2_client_secret, and to register your oauth2_redirect_uri.
 $ini = eZINI::instance('googleapi.ini');
-
+$client = new apiClient();
+$client->setApplicationName("Google+ PHP Starter Application");
 $client->setClientId($ini->variable("APIAccess", "ClientId"));
 $client->setClientSecret($ini->variable("APIAccess", "ClientSecret"));
+//$client->setDeveloperKey($ini->variable("APIAccess", "APIKey"));
+echo $ini->variable("APIAccess", "APIKey");
 $ini = eZINI::instance('site.ini');
-$client->setRedirectUri('http://'.$ini->variable("SiteSettings", "SiteURL").'/tuteisocial/glogin/');
-$client->setApplicationName("OAuth2_Example_App");
+$client->setRedirectUri(('http://' . $ini->variable("SiteSettings", "SiteURL") . '/social/glogin/'));
 
-$buzz = new apiBuzzService($client);
+//$client->setScopes(array('https://www.googleapis.com/auth/plus.me'));
+$plus = new apiBuzzService($client);
+
+if (isset($_REQUEST['logout'])) {
+    unset($_SESSION['access_token']);
+}
+
+
+
+if (isset($_GET['code'])) {
+    $client->authenticate();
+    $_SESSION['access_token'] = $client->getAccessToken();
+    //header('Location: http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF']);
+}
+
+
 
 if (isset($_SESSION['access_token'])) {
-  $client->setAccessToken($_SESSION['access_token']);
+    $client->setAccessToken($_SESSION['access_token']);
+}
+
+
+
+if ($client->getAccessToken()) {
+
+    $me = $plus->people->get('@me');
+    var_dump($me);
+
+    /*
+    $optParams = array('maxResults' => 100);
+    $activities = $plus->activities->listActivities('@me', '@public', $optParams);
+
+    // The access token may have been updated lazily.
+     * 
+     */
+    $_SESSION['access_token'] = $client->getAccessToken();
 } else {
-  $client->setAccessToken($client->authenticate());
+    $http = eZHTTPTool::instance();
+    $http->redirect($client->createAuthUrl());
 }
-$_SESSION['access_token'] = $client->getAccessToken();
-
+eZExecution::cleanExit();
 ?>
-<!doctype html>
-<html>
-<head>
-  <title>OAuth2 Sample</title>
-
-  <link rel='stylesheet' href='css/style.css' />
-</head>
-<body>
-<div id='container'>
-  <div id='top'>
-    <div id='identity'>
-    <?php if ($client->getAccessToken()) {
-
-      $me = $buzz->people->get('@me');	
-      
-      $ident = '<img alt="photo" src="%s"> <a href="%s">%s</a>';
-      printf($ident, $me['thumbnailUrl'], $me['profileUrl'], $me['displayName']);
-
-    }?>
-    </div>
-    <h1>Google APIs Client Library for PHP: OAuth2 Sample</h1>
-  </div>
-  <div id='main'>
-<?php if ($client->getAccessToken()) {
-
-  $activities = $buzz->activities->listActivities('@consumption', '@me');
-  foreach ($activities['items'] as $activity) {
-    $actor = $activity['actor'];
-    echo <<<HTML
-<div id='person'>
-  <div><p id='name'><a href='{$actor['profileUrl']}'>{$actor['name']}</a></p></div>
-  <p id='post'>{$activity['object']['content']}</p>
-</div>
-HTML;
-
-  }
-
-}
-?>
-
-<?php $_SESSION['access_token'] = $client->getAccessToken(); ?>

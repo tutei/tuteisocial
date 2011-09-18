@@ -42,24 +42,27 @@ class ezpObject
      **/
     public $nodes;
 
-    public function __construct( $classIdentifier, $parentNodeID = false, $creatorID = 14, $section = 1, $languageCode = false )
+    public function __construct( $classIdentifier, $parentNodeID = false, $creatorID = 14, $section = 1, $languageCode = false, $objectID = false )
     {
-        $this->class = eZContentClass::fetchByIdentifier( $classIdentifier );
-        if ( !$this->class instanceof eZContentClass )
-            throw new ezcBaseValueException( 'class',
-                                             ( isset( $this->class ) ? get_class( $this->class ) : null ),
-                                             'eZContentClass ($classIdentifier was: ' . $classIdentifier . ' ) ',
-                                             'member' );
+	
+	$this->class = eZContentClass::fetchByIdentifier( $classIdentifier );
+	if ( !$this->class instanceof eZContentClass )
+		    throw new ezcBaseValueException( 'class',
+		                                     ( isset( $this->class ) ? get_class( $this->class ) : null ),
+		                                     'eZContentClass ($classIdentifier was: ' . $classIdentifier . ' ) ',
+		                                     'member' );
 
-        $this->object = $this->class->instantiate( $creatorID, $section, false, $languageCode );
 
-        // Create main node
-        if ( is_numeric( $parentNodeID ) )
-        {
-            $this->mainNode = new ezpNode( $this->object, $parentNodeID, true );
-        }
+	$this->object = $objectID?eZContentObject::fetch($objectID):$this->class->instantiate( $creatorID, $section, false, $languageCode );
 
-        $this->nodes = array( $this->mainNode );
+	// Create main node
+	if ( is_numeric( $parentNodeID ) )
+	{
+	    $this->mainNode = $objectID?new ezpNode( $this->object, $parentNodeID, true,$this->mainNode() ):new ezpNode( $this->object, $parentNodeID, true );
+	}
+		
+	
+	$this->nodes = array( $this->mainNode );
     }
 
     /**

@@ -9,9 +9,10 @@
 
 class ezpNode
 {
-    function __construct( $object, $parentNodeID, $isMainNode )
+    function __construct( $object, $parentNodeID, $isMainNode, $mainNode=false )
     {
-        $this->nodeAssignment = $object->createNodeAssignment( $parentNodeID, $isMainNode );
+	if($mainNode)$this->node=$mainNode;
+        $this->nodeAssignment = $mainNode?$mainNode:$object->createNodeAssignment( $parentNodeID, $isMainNode );
     }
 
     /**

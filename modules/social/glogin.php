@@ -1,7 +1,5 @@
 <?php
 
-//session_destroy();exit;
-
 function genRandomString() {
     $length = 10;
     $characters = '0123456789abcdefghijklmnopqrstuvwxyz!@#$';
@@ -32,8 +30,6 @@ function loadImageCURL($source, $save_to) {
 }
 
 $Module = $Params['Module'];
-
-session_start();
 
 $ini = eZINI::instance('googleapi.ini');
 $client = new apiClient();
@@ -91,7 +87,8 @@ if ($client->getAccessToken()) {
         $user = new ezpObject('user', 12, 14, 2);
         $name = explode(' ', $me["displayName"]);
         $first_name = $name[0];
-        $last_name = implode(' ', array_slice($input, 0, 1));
+
+        $last_name = implode(' ', array_slice($name, 1));
 
         $username = $email;
         $password = genRandomString();
@@ -101,7 +98,7 @@ if ($client->getAccessToken()) {
 
         $user->__set("first_name", $first_name);
         $user->__set("last_name", $last_name);
-        $user->__set("user_account", "$username|$username|" . md5("$username\n$pass") . "|2");
+        $user->__set("user_account", "$username|$username|" . md5("$username\n$password") . "|2");
         $user->__set("image", $image);
 
         $user->publish();

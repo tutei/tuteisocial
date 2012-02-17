@@ -74,5 +74,5 @@ If you are using virtual hosts please change your .htaccess and include this lin
 
 RewriteRule ^extension/tuteisocial/design/ezflow/unity/objViewer.unity3d - [L]
 
-If you are using ezwebin, change your main design settings to ezflow.
+Change your main design settings to tutei.
 
